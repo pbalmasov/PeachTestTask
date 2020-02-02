@@ -1,9 +1,10 @@
 <template>
   <ul>
     <li v-for="{ id, name, code } in availiableSections" :key="id">
-      <nuxt-link :to="{ name: 'catalog-code', params: { code } }">{{
-        name
-      }}</nuxt-link>
+      <nuxt-link
+        :to="{ name: 'catalog-sections', params: { sections: code } }"
+        >{{ name }}</nuxt-link
+      >
     </li>
   </ul>
 </template>

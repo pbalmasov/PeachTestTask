@@ -13,8 +13,10 @@ export const mutations = {
 }
 
 export const getters = {
-  getItemsBySectionId: state => id =>
-    state.items.filter(item => item.sectionId === String(id)),
+  getItemsBySections: state => sections =>
+    state.items.filter(item =>
+      sections.find(section => section.id === item.sectionId)
+    ),
   getItemByCode: state => code => state.items.find(item => item.code === code),
   getSectionByCode: state => code =>
     state.sections.find(section => section.code === code)
