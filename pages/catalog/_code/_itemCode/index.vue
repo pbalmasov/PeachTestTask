@@ -3,7 +3,7 @@
     <img :src="item.picture" :alt="item.name" class="item__image" />
     <div class="item__info-wrapper">
       <h3>Арт. 32430 0</h3>
-      <h1>{{ item.name }}</h1>
+      <h1 class="item__title">{{ item.name }}</h1>
       <p>
         Энергосберегающая светодиодная лампа в форме витой свечи теплого
         свечения. Нестыдная лампа для открытых светильников, создаст уют в доме
@@ -50,9 +50,25 @@ export default {
 <style lang="scss">
 .item {
   &__image {
-    width: 1153px;
+    width: 100%;
     height: 657px;
     object-fit: contain;
+  }
+  &__info-wrapper {
+    height: 1837px;
+    border-radius: 0 0 6px 6px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 29px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: normal;
   }
 }
 </style>
