@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <base-header />
-    <nuxt />
+  <div class="layout">
+    <base-header class="layout__header" />
+    <div class="layout__content">
+      <nuxt />
+    </div>
     <base-footer />
   </div>
 </template>
@@ -12,7 +14,7 @@ export default {
   components: { BaseHeader, BaseFooter }
 }
 </script>
-<style>
+<style lang="scss">
 html {
   background: #1a1212;
   color: #ffffff;
@@ -26,6 +28,23 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+body,
+#__nuxt,
+#__layout {
+  min-height: 100vh;
+}
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 64px;
+  &__header {
+    margin-top: 23px;
+  }
+  &__content {
+    flex: 1;
+  }
 }
 
 *,

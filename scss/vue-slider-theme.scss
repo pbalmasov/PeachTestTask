@@ -1,0 +1,13 @@
+$dotBgColor: #b31983 !default;
+$dotBorderRadius: 50% !default;
+
+.vue-slider-dot {
+  @at-root &-handle {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: $dotBorderRadius;
+    background-color: $dotBgColor;
+    box-sizing: border-box;
+  }
+}

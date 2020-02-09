@@ -20,9 +20,15 @@
       </ul>
     </nav>
     <div class="header__search" />
-    <input type="checkbox" class="header__toggle" />
+    <base-switch />
   </header>
 </template>
+<script>
+import BaseSwitch from '~/components/BaseSwitch'
+export default {
+  components: { BaseSwitch }
+}
+</script>
 
 <style lang="scss">
 .header {
@@ -30,21 +36,20 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 50px;
   font-size: 16px;
   font-weight: 300;
+  padding: 22px 0;
 
   &__nav {
     flex: 1;
   }
   &__nav-list {
-    width: 463px;
     display: inline-flex;
     flex-direction: row;
     list-style-type: none;
   }
   &__nav-list-item {
-    margin-right: 10px;
+    margin-right: 30px;
   }
   &__nav-link {
     color: #ffffff;
@@ -56,14 +61,36 @@
     }
     &:hover {
       color: #551f42;
-      font-family: Roboto;
-      font-weight: 700;
     }
   }
   &__search {
     width: 26px;
     height: 26px;
     background: url(~assets/search.svg);
+    margin-right: 38px;
+  }
+  &__switch {
+    cursor: pointer;
+    &::before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 11px;
+      border-radius: 6px;
+      border: 3px solid #e4aed3;
+    }
+    &::after {
+      content: '';
+      display: block;
+      margin-top: -13px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+    input {
+      display: none;
+    }
   }
 }
 </style>

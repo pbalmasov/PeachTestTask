@@ -17,7 +17,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:300,400&display=swap&subset=cyrillic'
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:300,400,500&display=swap&subset=cyrillic'
       }
     ]
   },
@@ -35,7 +36,15 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    {
+      src: '~plugins/vue-slider-component.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/vue-input-autowidth.js'
+    }
+  ],
 
   /*
    ** Nuxt.js modules

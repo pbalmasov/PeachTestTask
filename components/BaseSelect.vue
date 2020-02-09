@@ -18,12 +18,8 @@ export default {
 .custom-select {
   display: block;
   color: #000000;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 30px;
-  font-weight: 400;
+  font: 400 30px 'Roboto Condensed', sans-serif;
   padding: 17px 29px;
-  // width: 100%;
-  // max-width: 100%;
   box-sizing: border-box;
   margin: 0;
   border: none;
@@ -37,23 +33,4 @@ export default {
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
 }
-.custom-select::-ms-expand {
-  display: none;
-}
-.custom-select:hover {
-  border-color: #888;
-}
-.custom-select:focus {
-  outline: none;
-}
-// .custom-select:focus {
-//   border-color: #aaa;
-//   box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-//   box-shadow: 0 0 0 3px -moz-mac-focusring;
-//   color: #222;
-//   outline: none;
-// }
-// .custom-select option {
-//   font-weight: normal;
-// }
 </style>
