@@ -27,7 +27,7 @@ export const actions = {
     try {
       const {
         data: { items, sections }
-      } = await this.$axios.get('/api/mock.php')
+      } = await this.$axios.get('http://rev.peachdesign.ru/api/mock.php')
       commit('setItems', Object.values(items))
       commit('setSections', Object.values(sections))
     } catch (e) {
